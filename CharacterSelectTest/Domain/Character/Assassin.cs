@@ -11,5 +11,7 @@ public sealed class Assassin : Entity.Character
         Strength = 12;
         Intelligence = 12;
         Agility = 17;
+        Defense = 6;
+        CriticalChance = 30;
     }
 }

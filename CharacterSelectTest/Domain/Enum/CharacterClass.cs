@@ -6,5 +6,6 @@ public enum CharacterClass
     Mage = 2,
     Rogue = 3,
     Assassin = 4,
-    Paladin = 5
+    Paladin = 5,
+    Ranger = 6
 }

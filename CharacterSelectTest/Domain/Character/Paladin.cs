@@ -11,5 +11,7 @@ public sealed class Paladin : Entity.Character
         Strength = 12;
         Intelligence = 10;
         Agility = 6;
+        Defense = 20;
+        CriticalChance = 5;
     }
 }
