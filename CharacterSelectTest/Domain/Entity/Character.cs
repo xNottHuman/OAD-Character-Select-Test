@@ -19,6 +19,11 @@ public abstract class Character
         Class = @class;
     }
 
+    public virtual int Attack()
+    {
+        return Strength * 3;
+    }
+
     public virtual void Describe()
     {
         Console.WriteLine($"[{Class}] {Name}");
