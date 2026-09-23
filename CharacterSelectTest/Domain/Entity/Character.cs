@@ -26,6 +26,8 @@ public abstract class Character
         return MainStat * 3;
     }
 
+    public abstract string UseSpecialAbility();
+
     public virtual void Describe()
     {
         Console.WriteLine($"[{Class}] {Name}");

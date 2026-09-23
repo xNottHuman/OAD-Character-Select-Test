@@ -15,4 +15,9 @@ public sealed class Paladin : Entity.Character
         CriticalChance = 5;
     }
     public override int MainStat => Strength;
+
+    public override string UseSpecialAbility()
+    {
+        return $"{Name} używa Świętej Tarczy!";
+    }
 }

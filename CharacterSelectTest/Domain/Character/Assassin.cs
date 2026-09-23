@@ -15,4 +15,10 @@ public sealed class Assassin : Entity.Character
         CriticalChance = 30;
     }
     public override int MainStat => Agility;
+
+    public override string UseSpecialAbility()
+    {
+        return $"{Name} wykonuje Cichy Cios!";
+    }
+
 }

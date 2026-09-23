@@ -15,4 +15,9 @@ public sealed class Rogue : Entity.Character
         CriticalChance = 25;
     }
     public override int MainStat => Agility;
+
+    public override string UseSpecialAbility()
+    {
+        return $"{Name} wykonuje Zasadzkę!";
+    }
 }

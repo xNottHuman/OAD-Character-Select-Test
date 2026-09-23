@@ -115,6 +115,10 @@ public class CharacterFactoryTest
         Assert.AreEqual(20, character.CriticalChance);
     }
 
+
+    //testy ataku
+
+
     [TestMethod]
     public void TestWarriorAttack()
     {
@@ -174,4 +178,68 @@ public class CharacterFactoryTest
 
         Assert.AreEqual(48, character.Attack());
     }
+
+
+    //testy umiejetności specjalnych
+
+
+    [TestMethod]
+
+    public void TestWarriorSpecialAbility()
+    {
+        var character = CharacterFactory.Create(
+            CharacterClass.Warrior,
+            "Test Warrior");
+        Assert.AreEqual("Test Warrior używa Wiru Ostrzy!", character.UseSpecialAbility());
+    }
+
+    [TestMethod]
+
+    public void TestMageSpecialAbility()
+    {
+        var character = CharacterFactory.Create(
+            CharacterClass.Mage,
+            "Test Mage");
+        Assert.AreEqual("Test Mage rzuca Kule Ognia!", character.UseSpecialAbility());
+    }
+
+    [TestMethod]
+    public void TestRogueSpecialAbility()
+    {
+        var character = CharacterFactory.Create(
+            CharacterClass.Rogue,
+            "Test Rogue");
+        Assert.AreEqual("Test Rogue wykonuje Zasadzkę!", character.UseSpecialAbility());
+    } 
+    
+    [TestMethod]
+
+    public void TestAssassinSpecialAbility()
+    {
+        var character = CharacterFactory.Create(
+            CharacterClass.Assassin,
+            "Test Assassin");
+        Assert.AreEqual("Test Assassin wykonuje Cichy Cios!", character.UseSpecialAbility());
+    }
+
+    [TestMethod]
+
+    public void TestPaladinSpecialAbility()
+    {
+        var character = CharacterFactory.Create(
+            CharacterClass.Paladin,
+            "Test Paladin");
+        Assert.AreEqual("Test Paladin używa Świętej Tarczy!", character.UseSpecialAbility());
+    }
+
+    [TestMethod]
+
+    public void TestRangerSpecialAbility()
+    {
+        var character = CharacterFactory.Create(
+            CharacterClass.Ranger,
+            "Test Ranger");
+        Assert.AreEqual("Test Ranger wykonuje Precyzyjny Strzał!", character.UseSpecialAbility());
+    }
+
 }

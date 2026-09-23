@@ -15,4 +15,9 @@ public sealed class Ranger : Entity.Character
         CriticalChance = 20;
     }
     public override int MainStat => Agility;
+
+    public override string UseSpecialAbility()
+    {
+        return $"{Name} wykonuje Precyzyjny Strzał!";
+    }
 }

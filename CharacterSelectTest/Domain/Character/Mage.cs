@@ -15,4 +15,9 @@ public sealed class Mage : Entity.Character
         CriticalChance = 15;
     }
     public override int MainStat => Intelligence;
+
+    public override string UseSpecialAbility()
+    {
+        return $"{Name} rzuca Kule Ognia!";
+    }
 }

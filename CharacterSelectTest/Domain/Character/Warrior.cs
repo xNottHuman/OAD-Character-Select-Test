@@ -16,4 +16,9 @@ public sealed class Warrior : Entity.Character
     }
     
     public override int MainStat => Strength;
+
+    public override string UseSpecialAbility()
+    {
+        return $"{Name} używa Wiru Ostrzy!";
+    }
 }
