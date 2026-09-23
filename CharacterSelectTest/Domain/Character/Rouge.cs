@@ -14,4 +14,5 @@ public sealed class Rogue : Entity.Character
         Defense = 7;
         CriticalChance = 25;
     }
+    public override int MainStat => Agility;
 }

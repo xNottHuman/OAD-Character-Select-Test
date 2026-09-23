@@ -14,4 +14,5 @@ public sealed class Paladin : Entity.Character
         Defense = 20;
         CriticalChance = 5;
     }
+    public override int MainStat => Strength;
 }

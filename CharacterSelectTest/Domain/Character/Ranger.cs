@@ -14,4 +14,5 @@ public sealed class Ranger : Entity.Character
         Defense = 10;
         CriticalChance = 20;
     }
+    public override int MainStat => Agility;
 }

@@ -14,4 +14,5 @@ public sealed class Assassin : Entity.Character
         Defense = 6;
         CriticalChance = 30;
     }
+    public override int MainStat => Agility;
 }

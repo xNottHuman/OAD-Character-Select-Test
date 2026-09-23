@@ -14,4 +14,6 @@ public sealed class Warrior : Entity.Character
         Defense = 18;
         CriticalChance = 5;
     }
+    
+    public override int MainStat => Strength;
 }

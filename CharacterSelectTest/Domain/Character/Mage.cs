@@ -14,4 +14,5 @@ public sealed class Mage : Entity.Character
         Defense = 5;
         CriticalChance = 15;
     }
+    public override int MainStat => Intelligence;
 }

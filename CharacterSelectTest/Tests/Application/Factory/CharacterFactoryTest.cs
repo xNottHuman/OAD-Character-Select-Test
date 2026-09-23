@@ -132,7 +132,7 @@ public class CharacterFactoryTest
             CharacterClass.Mage,
             "Test Mage");
 
-        Assert.AreEqual(12, character.Attack());
+        Assert.AreEqual(48, character.Attack());
     }
 
     [TestMethod]
@@ -142,7 +142,7 @@ public class CharacterFactoryTest
             CharacterClass.Rogue,
             "Test Rogue");
 
-        Assert.AreEqual(27, character.Attack());
+        Assert.AreEqual(45, character.Attack());
     }
 
     [TestMethod]
@@ -152,7 +152,7 @@ public class CharacterFactoryTest
             CharacterClass.Assassin,
             "Test Assassin");
 
-        Assert.AreEqual(36, character.Attack());
+        Assert.AreEqual(51, character.Attack());
     }
 
     [TestMethod]
@@ -172,42 +172,6 @@ public class CharacterFactoryTest
             CharacterClass.Ranger,
             "Test Ranger");
 
-        Assert.AreEqual(33, character.Attack());
+        Assert.AreEqual(48, character.Attack());
     }
 }
-
-
-Do tego w Character.cs musi być:
-
-public virtual int Attack()
-    {
-        return Strength * 3;
-    }
-
-    Co wtedy masz?
-
-    Twoje testy sprawdzają:
-
-utworzenie Warrior, Mage, Rogue, Assassin, Paladin, Ranger;
-
-    czy powstał dokładnie właściwy typ;
-
-nazwę postaci;
-
-Health;
-
-Strength;
-
-Intelligence;
-
-Agility;
-
-Defense;
-
-CriticalChance;
-
-czy atak jest równy Strength* 3.
-
-Czyli część dotycząca funkcjonalności ataku na 4 jest zrobiona w najprostszy możliwy sposób.
-
-Uwaga: jeśli nauczyciel wymaga testów tylko dla „nowych” 3 klas, nie musisz mieć aż 6 testów Attack(). Te dodatkowe 3 nie zaszkodzą, ale są po prostu trochę redundantne.

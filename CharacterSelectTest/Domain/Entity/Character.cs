@@ -19,9 +19,11 @@ public abstract class Character
         Class = @class;
     }
 
+    public abstract int MainStat { get; }
+
     public virtual int Attack()
     {
-        return Strength * 3;
+        return MainStat * 3;
     }
 
     public virtual void Describe()
