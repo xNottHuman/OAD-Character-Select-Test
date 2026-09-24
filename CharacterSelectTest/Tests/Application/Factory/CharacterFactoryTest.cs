@@ -1,6 +1,7 @@
 ﻿using CharacterSelectTest.Application.Factory;
 using CharacterSelectTest.Domain.Character;
 using CharacterSelectTest.Domain.Enum;
+using System.Threading;
 
 namespace CharacterSelectTest.Tests.Application.Factory;
 
@@ -19,10 +20,10 @@ public class CharacterFactoryTest
     [TestMethod]
     public void TestCreateMage()
     {
-        Mage mage = new("Test mage");
+        Mage mage = new("Test Mage");
 
-        Assert.IsExactInstanceOfType<Mage>(mage);
         Assert.AreEqual("Test Mage", mage.Name);
+        Assert.AreEqual(CharacterClass.Mage, mage.Class);
     }
 
     [TestMethod]
@@ -30,8 +31,8 @@ public class CharacterFactoryTest
     {
         Rogue rogue = new("Test Rogue");
 
-        Assert.IsExactInstanceOfType<Rogue>(rogue);
         Assert.AreEqual("Test Rogue", rogue.Name);
+        Assert.AreEqual(CharacterClass.Rogue, rogue.Class);
 
     }
 
@@ -40,8 +41,8 @@ public class CharacterFactoryTest
     {
         Assassin assassin = new("Test Assassin");
 
-        Assert.IsExactInstanceOfType<Assassin>(assassin);
         Assert.AreEqual("Test Assassin", assassin.Name);
+        Assert.AreEqual(CharacterClass.Assassin, assassin.Class);
     }
 
     [TestMethod]
@@ -49,8 +50,8 @@ public class CharacterFactoryTest
     {
         Paladin paladin = new("Test Paladin");
 
-        Assert.IsExactInstanceOfType<Paladin>(paladin);
         Assert.AreEqual("Test Paladin", paladin.Name);
+        Assert.AreEqual(CharacterClass.Paladin, paladin.Class);
     }
 
     [TestMethod]
@@ -58,8 +59,8 @@ public class CharacterFactoryTest
     {
         Ranger ranger = new("Test Ranger");
 
-        Assert.IsExactInstanceOfType<Ranger>(ranger);
         Assert.AreEqual("Test Ranger", ranger.Name);
+        Assert.AreEqual(CharacterClass.Ranger, ranger.Class);
     }
 
 }
