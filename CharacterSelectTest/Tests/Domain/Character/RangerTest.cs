@@ -1,4 +1,5 @@
 ﻿using CharacterSelectTest.Application.Factory;
+using CharacterSelectTest.Domain.Character;
 using CharacterSelectTest.Domain.Enum;
 using System;
 using System.Collections.Generic;
@@ -12,23 +13,32 @@ namespace CharacterSelectTest.Tests.Domain.Character
     public class RangerTest
     {
         [TestMethod]
+        public void TestRangerStats()
+        {
+            Ranger ranger = new("Test Ranger");
+
+            Assert.AreEqual(100, ranger.Health);
+            Assert.AreEqual(11, ranger.Strength);
+            Assert.AreEqual(9, ranger.Intelligence);
+            Assert.AreEqual(16, ranger.Agility);
+            Assert.AreEqual(10, ranger.Defense);
+            Assert.AreEqual(20, ranger.CriticalChance);
+        }
+
+        [TestMethod]
         public void TestRangerAttack()
         {
-            var character = CharacterFactory.Create(
-                CharacterClass.Ranger,
-                "Test Ranger");
+            Ranger ranger = new("Test Ranger");
 
-            Assert.AreEqual(48, character.Attack());
+            Assert.AreEqual(48, ranger.Attack());
         }
 
         [TestMethod]
 
         public void TestRangerSpecialAbility()
         {
-            var character = CharacterFactory.Create(
-                CharacterClass.Ranger,
-                "Test Ranger");
-            Assert.AreEqual("Test Ranger wykonuje Precyzyjny Strzał!", character.UseSpecialAbility());
+            Ranger ranger = new("Test Ranger");
+            Assert.AreEqual("Test Ranger wykonuje Precyzyjny Strzał!", ranger.UseSpecialAbility());
         }
     }
 }

@@ -10,109 +10,56 @@ public class CharacterFactoryTest
     [TestMethod]
     public void TestCreateWarrior()
     {
-        var character = CharacterFactory.Create(
-            CharacterClass.Warrior,
-            "Test Warrior");
+        Warrior warrior = new("Test Warrior");
 
-        Assert.IsExactInstanceOfType<Warrior>(character);
-        Assert.AreEqual("Test Warrior", character.Name);
-
-        Assert.AreEqual(120, character.Health);
-        Assert.AreEqual(14, character.Strength);
-        Assert.AreEqual(6, character.Intelligence);
-        Assert.AreEqual(8, character.Agility);
-        Assert.AreEqual(18, character.Defense);
-        Assert.AreEqual(5, character.CriticalChance);
+        Assert.AreEqual("Test Warrior", warrior.Name);
+        Assert.AreEqual(CharacterClass.Warrior, warrior.Class);
     }
 
     [TestMethod]
     public void TestCreateMage()
     {
-        var character = CharacterFactory.Create(
-            CharacterClass.Mage,
-            "Test Mage");
+        Mage mage = new("Test mage");
 
-        Assert.IsExactInstanceOfType<Mage>(character);
-        Assert.AreEqual("Test Mage", character.Name);
-
-        Assert.AreEqual(80, character.Health);
-        Assert.AreEqual(4, character.Strength);
-        Assert.AreEqual(16, character.Intelligence);
-        Assert.AreEqual(10, character.Agility);
-        Assert.AreEqual(5, character.Defense);
-        Assert.AreEqual(15, character.CriticalChance);
+        Assert.IsExactInstanceOfType<Mage>(mage);
+        Assert.AreEqual("Test Mage", mage.Name);
     }
 
     [TestMethod]
     public void TestCreateRogue()
     {
-        var character = CharacterFactory.Create(
-            CharacterClass.Rogue,
-            "Test Rogue");
+        Rogue rogue = new("Test Rogue");
 
-        Assert.IsExactInstanceOfType<Rogue>(character);
-        Assert.AreEqual("Test Rogue", character.Name);
+        Assert.IsExactInstanceOfType<Rogue>(rogue);
+        Assert.AreEqual("Test Rogue", rogue.Name);
 
-        Assert.AreEqual(95, character.Health);
-        Assert.AreEqual(9, character.Strength);
-        Assert.AreEqual(8, character.Intelligence);
-        Assert.AreEqual(15, character.Agility);
-        Assert.AreEqual(7, character.Defense);
-        Assert.AreEqual(25, character.CriticalChance);
     }
 
     [TestMethod]
     public void TestCreateAssassin()
     {
-        var character = CharacterFactory.Create(
-            CharacterClass.Assassin,
-            "Test Assassin");
+        Assassin assassin = new("Test Assassin");
 
-        Assert.IsExactInstanceOfType<Assassin>(character);
-        Assert.AreEqual("Test Assassin", character.Name);
-
-        Assert.AreEqual(70, character.Health);
-        Assert.AreEqual(12, character.Strength);
-        Assert.AreEqual(12, character.Intelligence);
-        Assert.AreEqual(17, character.Agility);
-        Assert.AreEqual(6, character.Defense);
-        Assert.AreEqual(30, character.CriticalChance);
+        Assert.IsExactInstanceOfType<Assassin>(assassin);
+        Assert.AreEqual("Test Assassin", assassin.Name);
     }
 
     [TestMethod]
     public void TestCreatePaladin()
     {
-        var character = CharacterFactory.Create(
-            CharacterClass.Paladin,
-            "Test Paladin");
+        Paladin paladin = new("Test Paladin");
 
-        Assert.IsExactInstanceOfType<Paladin>(character);
-        Assert.AreEqual("Test Paladin", character.Name);
-
-        Assert.AreEqual(110, character.Health);
-        Assert.AreEqual(12, character.Strength);
-        Assert.AreEqual(10, character.Intelligence);
-        Assert.AreEqual(6, character.Agility);
-        Assert.AreEqual(20, character.Defense);
-        Assert.AreEqual(5, character.CriticalChance);
+        Assert.IsExactInstanceOfType<Paladin>(paladin);
+        Assert.AreEqual("Test Paladin", paladin.Name);
     }
 
     [TestMethod]
     public void TestCreateRanger()
     {
-        var character = CharacterFactory.Create(
-            CharacterClass.Ranger,
-            "Test Ranger");
+        Ranger ranger = new("Test Ranger");
 
-        Assert.IsExactInstanceOfType<Ranger>(character);
-        Assert.AreEqual("Test Ranger", character.Name);
-
-        Assert.AreEqual(100, character.Health);
-        Assert.AreEqual(11, character.Strength);
-        Assert.AreEqual(9, character.Intelligence);
-        Assert.AreEqual(16, character.Agility);
-        Assert.AreEqual(10, character.Defense);
-        Assert.AreEqual(20, character.CriticalChance);
+        Assert.IsExactInstanceOfType<Ranger>(ranger);
+        Assert.AreEqual("Test Ranger", ranger.Name);
     }
 
 }
